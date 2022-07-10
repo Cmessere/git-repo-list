@@ -1,7 +1,12 @@
 import * as React from 'react';
+
 import { gitHubClient } from './Utilities/Api';
+import { FetchError } from './Utilities/Types';
 import { capitalizeString } from './Utilities/UtilityFunctions';
+
 import './App.css';
+import LoadingPage from './Components/LoadingPage';
+import ErrorPage from './Components/ErrorPage';
 
 function App() {
   const [users, setUsers] = React.useState(undefined as any )
@@ -27,6 +32,16 @@ function App() {
   }, [])
 
 
+  if(isLoading){
+    return(
+      <LoadingPage />
+    )
+  }
+  if(error.isError){
+    return(
+      <ErrorPage message={error.message} />
+    )
+  }
 
   return (
     <div >
