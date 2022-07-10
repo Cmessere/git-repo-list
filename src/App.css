@@ -146,3 +146,17 @@ input[type="text"]
     flex-direction: column;
     margin: auto;
 }
+
+.repo-detail-icon{
+    margin-right: 12px;
+}
+
+.repo-detail-container{
+    display: flex;
+    margin: auto;
+    width: 800px;
+}
+
+.repo-detail-item{
+    flex: 1;
+}

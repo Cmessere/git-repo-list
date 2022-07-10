@@ -2,6 +2,9 @@ import * as React from 'react';
 import { useParams } from 'react-router-dom';
 import { reposDetailPromise } from '../Utilities/Api';
 import { FetchError, RepoApiResponse, RepoDetailParams } from '../Utilities/Types';
+import { faEye, faStar, faCodeFork } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import ErrorPage from './ErrorPage';
 import LoadingPage from './LoadingPage';
 
@@ -36,10 +39,12 @@ const RepoDetailPage = () => {
 
     return(
         <div className="repo-detail-page">
-            <h1>Welcome to {params.owner}'s repo page for '{params.repo}' </h1>
-            <h2>Subscribers: {repoDetails.subscribers_count}</h2>
-            <h2>Stars: {repoDetails.watchers_count}</h2>
-            <h2>Forks: {repoDetails.forks_count}</h2>
+            <h1>{params.owner}'s '{params.repo}' </h1>
+            <div className='repo-detail-container'>
+              <h2 className='repo-detail-item'><FontAwesomeIcon className='repo-detail-icon' icon={faEye} />Subs: {repoDetails.subscribers_count}</h2>
+              <h2 className='repo-detail-item'><FontAwesomeIcon className='repo-detail-icon' icon={faStar} />Stars: {repoDetails.watchers_count}</h2>
+              <h2 className='repo-detail-item'><FontAwesomeIcon className='repo-detail-icon' icon={faCodeFork} />Forks: {repoDetails.forks_count}</h2>
+            </div>
         </div>
       )
 }
