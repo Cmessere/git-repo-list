@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { reposDetailPromise } from '../Utilities/Api';
 import { FetchError, RepoApiResponse, RepoDetailParams } from '../Utilities/Types';
 import { faEye, faStar, faCodeFork } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { capitalizeString } from '../Utilities/UtilityFunctions';
 
 import ErrorPage from './ErrorPage';
 import LoadingPage from './LoadingPage';
@@ -39,12 +40,13 @@ const RepoDetailPage = () => {
 
     return(
         <div className="repo-detail-page">
-            <h1>{params.owner}'s '{params.repo}' </h1>
+            <h1>{capitalizeString(params.owner)}'s '{params.repo}' </h1>
             <div className='repo-detail-container'>
               <h2 className='repo-detail-item'><FontAwesomeIcon className='repo-detail-icon' icon={faEye} />Subs: {repoDetails.subscribers_count}</h2>
               <h2 className='repo-detail-item'><FontAwesomeIcon className='repo-detail-icon' icon={faStar} />Stars: {repoDetails.watchers_count}</h2>
               <h2 className='repo-detail-item'><FontAwesomeIcon className='repo-detail-icon' icon={faCodeFork} />Forks: {repoDetails.forks_count}</h2>
             </div>
+            <Link className='repo-detail-link' to={'/'}>Do another search?</Link>
         </div>
       )
 }
