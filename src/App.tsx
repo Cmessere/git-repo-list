@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { gitHubClient } from './Utilities/Api';
 import './App.css';
-import { usersApi, organizationsApi } from './Utilities/Api';
 
 function App() {
   const [users, setUsers] = React.useState(undefined as any )
