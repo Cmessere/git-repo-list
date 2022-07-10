@@ -72,5 +72,21 @@
 
 .user-list-page{
     display: flex;
+    flex-direction: column;
+}
+
+.user-list-container{
+    display: flex;
     justify-content: center;
+}
+
+.user-list-title{
+    margin: 24px auto;
+}
+
+.user-list-title-container{
+    margin: auto;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid black;
 }
