@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { gitHubClient } from './Utilities/Api';
-import { FetchError } from './Utilities/Types';
+import { FetchError, UserData } from './Utilities/Types';
 import { getRandomItems } from './Utilities/UtilityFunctions';
 
 import './App.css';
@@ -10,12 +10,12 @@ import ErrorPage from './Pages/ErrorPage';
 import UserListPage from './Pages/UserListPage';
 
 function App() {
-  const [users, setUsers] = React.useState(undefined as any )
-  const [organizations, setOrganizations] = React.useState(undefined as any )
+  const [users, setUsers] = React.useState([] as UserData[] )
+  const [organizations, setOrganizations] = React.useState([] as UserData[] )
   const [error, setError] = React.useState({isError:false} as FetchError)
   const [isLoading, setIsLoading] = React.useState(true as Boolean)
   const [searchValue, setSearchValue] = React.useState("" as string)
-  const usersPerPage = 5
+  const usersPerPage:number = 5
 
   const handleSubmit = (e: React.FormEvent) =>{
     e.preventDefault()
@@ -37,7 +37,7 @@ function App() {
         setUsers(getRandomItems(usersResponse.data, usersPerPage))
         setOrganizations(getRandomItems(organizationsResponse.data, usersPerPage))
       })
-      .catch((e: any) => {
+      .catch((e: FetchError) => {
         setError({isError:true, message:e.message})
       })
       .finally(() => setIsLoading(false))
