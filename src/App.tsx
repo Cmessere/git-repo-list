@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { gitHubClient } from './Utilities/Api';
+import { capitalizeString } from './Utilities/UtilityFunctions';
 import './App.css';
 
 function App() {
@@ -29,7 +30,12 @@ function App() {
 
   return (
     <div >
-
+      <ul className='user-list'>
+      {users.map(u => <li className='user-list-item'><p className='user-list-paragraph'>{capitalizeString(u.login)}</p><img src={u.avatar_url} alt="Avatar" className="avatar"/> </li>)}
+      </ul>
+      <ul className='organization-list'>
+        {organizations.map(o => <li className='user-list-item'><p className='user-list-paragraph'>{capitalizeString(o.login)}</p> <img src={o.avatar_url} alt="Avatar" className="avatar"/> </li>)}
+      </ul>
     </div>
   );
 }

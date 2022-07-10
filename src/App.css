@@ -1,0 +1,24 @@
+
+/*Home page*/
+.avatar{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-list-item{
+    width: 250px;
+    display: flex;
+    text-align: center;
+    margin: 12px 0;
+}
+
+.user-list-paragraph{
+    font-size: 24px;
+    margin: auto;
+    flex: 1;
+    font-weight: 600;
+    text-align: left;
+}
+
