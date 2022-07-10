@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { cleanSearchValue } from './Utilities/UtilityFunctions';
+import { cleanSearchValue } from '../Utilities/UtilityFunctions';
 
 import { useHistory } from 'react-router-dom';
 
-function App() {
+function SearchPage() {
 
   const [searchValue, setSearchValue] = React.useState("" as string)
 
@@ -30,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default SearchPage;

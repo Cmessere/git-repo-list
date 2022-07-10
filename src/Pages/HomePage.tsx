@@ -9,7 +9,7 @@ import LoadingPage from '../Pages/LoadingPage';
 import ErrorPage from '../Pages/ErrorPage';
 import UserListPage from '../Pages/UserListPage';
 import { Route, Switch } from 'react-router-dom';
-import App from '../App';
+import App from './SearchPage';
 import RepoDetailPage from './RepoDetailPage';
 
 function Home() {
