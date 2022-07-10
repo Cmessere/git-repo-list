@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { gitHubClient } from './Utilities/Api';
 import { FetchError } from './Utilities/Types';
+import { getRandomItems } from './Utilities/UtilityFunctions';
 
 import './App.css';
 import LoadingPage from './Pages/LoadingPage';
@@ -13,6 +14,7 @@ function App() {
   const [organizations, setOrganizations] = React.useState(undefined as any )
   const [error, setError] = React.useState({isError:false} as FetchError)
   const [isLoading, setIsLoading] = React.useState(true as Boolean)
+  const usersPerPage = 5
 
   React.useEffect(() => {
 
@@ -21,8 +23,8 @@ function App() {
         gitHubClient.get('/organizations')
       ])
       .then(([usersResponse, organizationsResponse])=>{
-        setUsers(usersResponse.data)
-        setOrganizations(organizationsResponse.data)
+        setUsers(getRandomItems(usersResponse.data, usersPerPage))
+        setOrganizations(getRandomItems(organizationsResponse.data, usersPerPage))
       })
       .catch((e: any) => {
         setError({isError:true, message:e.message})
