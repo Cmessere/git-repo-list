@@ -13,7 +13,6 @@ const RepoDetailPage = () => {
     const [isLoading, setIsLoading] = React.useState(true as Boolean)
     
     React.useEffect(() =>{
-        
         reposDetailPromise(params.owner, params.repo)
           .then((response:any)=>{
             setRepoDetails(response.data)
@@ -36,8 +35,8 @@ const RepoDetailPage = () => {
       }
 
     return(
-        <div >
-            <h1>Welcome to {params.owner}'s repo page for {params.repo} </h1>
+        <div className="repo-detail-page">
+            <h1>Welcome to {params.owner}'s repo page for '{params.repo}' </h1>
             <h2>Subscribers: {repoDetails.subscribers_count}</h2>
             <h2>Stars: {repoDetails.watchers_count}</h2>
             <h2>Forks: {repoDetails.forks_count}</h2>
