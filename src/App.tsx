@@ -27,7 +27,7 @@ function App() {
       .catch((e: any) => {
         setError({isError:true, message:e.message})
       })
-      .finally(() => setIsLoading(true))
+      .finally(() => setIsLoading(false))
 
   }, [])
 
