@@ -90,3 +90,27 @@
     width: 100%;
     border-bottom: 1px solid black;
 }
+
+/* Search Page */
+.search-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-container{
+    margin: auto;
+    text-align: center;
+}
+
+.search-form{
+    margin: 64px auto 64px auto;
+}
+
+.search-input{
+    width: 100%;
+}
+
+input[type="text"]
+{
+    font-size:24px;
+}
