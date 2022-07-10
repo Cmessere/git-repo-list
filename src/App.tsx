@@ -61,7 +61,7 @@ function App() {
       <div className='search-container'>
         <h1 className='search-title'>GitHub Search</h1>
         <form className='search-form'  onSubmit={handleSubmit}>
-          <h2 className='search-subtitle'>Input a user's or an organization's name to show its repos</h2>
+          <h2 className='search-subtitle'>Input the owner and the repository name:</h2>
           <input  className='search-input' type="text" value={searchValue} onChange={handleSearch} />
         </form>
       </div>
