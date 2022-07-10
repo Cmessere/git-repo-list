@@ -5,7 +5,6 @@ import { RepoDetailParams } from '../Utilities/Types';
 const RepoDetailPage = () => {
 
     const params:RepoDetailParams = useParams()
-    console.log("params", params)
 
     return(
         <div >
