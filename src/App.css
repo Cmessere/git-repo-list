@@ -114,3 +114,15 @@ input[type="text"]
 {
     font-size:24px;
 }
+
+/*Header*/
+
+.header-container{
+    height: 72px;
+    border-bottom: 4px solid black;
+    display: flex;
+}
+
+.header-title{
+    margin: auto;
+}
