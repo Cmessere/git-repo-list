@@ -1,2 +1,5 @@
 const axios = require('axios');
-export const gitHubClient = axios.create({ baseURL: 'https://api.github.com' })
+
+const itemsPerPage = 5;
+
+export const gitHubClient = axios.create({ baseURL: 'https://api.github.com',  params: { per_page: itemsPerPage }})

@@ -2,17 +2,17 @@ import * as React from 'react';
 
 import { gitHubClient } from './Utilities/Api';
 import { FetchError } from './Utilities/Types';
-import { capitalizeString } from './Utilities/UtilityFunctions';
 
 import './App.css';
-import LoadingPage from './Components/LoadingPage';
-import ErrorPage from './Components/ErrorPage';
+import LoadingPage from './Pages/LoadingPage';
+import ErrorPage from './Pages/ErrorPage';
+import UserListPage from './Pages/UserListPage';
 
 function App() {
   const [users, setUsers] = React.useState(undefined as any )
   const [organizations, setOrganizations] = React.useState(undefined as any )
   const [error, setError] = React.useState({isError:false} as FetchError)
-  const [isLoading, setIsLoading] = React.useState(true)
+  const [isLoading, setIsLoading] = React.useState(true as Boolean)
 
   React.useEffect(() => {
 
@@ -44,14 +44,7 @@ function App() {
   }
 
   return (
-    <div >
-      <ul className='user-list'>
-      {users.map(u => <li className='user-list-item'><p className='user-list-paragraph'>{capitalizeString(u.login)}</p><img src={u.avatar_url} alt="Avatar" className="avatar"/> </li>)}
-      </ul>
-      <ul className='organization-list'>
-        {organizations.map(o => <li className='user-list-item'><p className='user-list-paragraph'>{capitalizeString(o.login)}</p> <img src={o.avatar_url} alt="Avatar" className="avatar"/> </li>)}
-      </ul>
-    </div>
+    <UserListPage users={users} organizations={organizations} />
   );
 }
 
