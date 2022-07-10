@@ -2,12 +2,13 @@ import * as React from 'react';
 
 import { gitHubClient } from './Utilities/Api';
 import { FetchError, UserData } from './Utilities/Types';
-import { getRandomItems } from './Utilities/UtilityFunctions';
+import { cleanSearchValue, getRandomItems } from './Utilities/UtilityFunctions';
 
 import './App.css';
 import LoadingPage from './Pages/LoadingPage';
 import ErrorPage from './Pages/ErrorPage';
 import UserListPage from './Pages/UserListPage';
+import { useHistory } from 'react-router-dom';
 
 function App() {
   const [users, setUsers] = React.useState([] as UserData[] )
@@ -17,9 +18,12 @@ function App() {
   const [searchValue, setSearchValue] = React.useState("" as string)
   const usersPerPage:number = 5
 
+  let history = useHistory()
+
   const handleSubmit = (e: React.FormEvent) =>{
     e.preventDefault()
-    console.log("Searching: ", searchValue)
+    const cleanedValue = cleanSearchValue(searchValue)
+    history.push(`/repos/${cleanedValue}`)
   }
 
   const handleSearch = (e:React.ChangeEvent<HTMLInputElement>) =>{

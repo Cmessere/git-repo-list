@@ -27,3 +27,10 @@ export const getRandomItems = (array:any[], usersPerPage:number) => {
 
     return randomizedArray
 }
+
+export const cleanSearchValue = (string:string):string => {
+    //The first replace is a regex to remove multiple spaces. The rest is a simple replace of spaces with a slash
+    const cleanedValue = string.replace( /\s\s+/g, ' ' ).split(' ').join('/');
+    
+    return cleanedValue
+}
