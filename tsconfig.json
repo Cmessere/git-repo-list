@@ -1,11 +1,15 @@
 {
     "compilerOptions": {
-      "target": "es6",
-      "removeComments": false,
-      "jsx": "react",
-      "moduleResolution": "node"
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "module": "Node16",
+        "jsx": "react",
+        "target": "es5",
+        "allowJs": true
+
     },
     "include": [
-      "src"
+        "./src/"
     ]
-  }
+}
