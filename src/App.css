@@ -213,7 +213,6 @@ input[type="text"]
 .repo-icon-label{
     flex: 1;
     display: flex;
-    justify-content: flex-end;
 }
 
 .repo-list-title{
