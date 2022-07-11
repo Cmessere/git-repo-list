@@ -1,4 +1,5 @@
 {
+  "homepage": "https://cmessere.github.io",
   "name": "git-repo-list",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +21,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -45,6 +48,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
+    "gh-pages": "^4.0.0",
     "source-map-loader": "^4.0.0",
     "ts-loader": "^9.3.1",
     "typescript": "^4.7.4"
