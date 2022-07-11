@@ -37,7 +37,7 @@ const RepoListPage = () => {
       setCurrentItems(reposList.slice(itemOffset, endOffset));
       setPageCount(Math.ceil(reposList.length / itemsPerPage));
 
-    }, [itemOffset, itemsPerPage, params]);
+    }, [itemOffset, itemsPerPage, params, reposList]);
   
 
     const handlePageClick = (event) => {
@@ -70,7 +70,7 @@ const RepoListPage = () => {
             <ul className="repo-list-container">
                 {currentItems.map(r => 
                     <li key={r.name} className='repo-list-item'>
-                        <p className='repo-list-label'>{capitalizeString(r.name)}</p>
+                        <Link className='repo-list-label' to={`/repos/${params.owner}/${r.name}`}>{capitalizeString(r.name)}</Link>
                         <p className='repo-icon-label'><FontAwesomeIcon className='repo-detail-icon' icon={faStar} /> {r.watchers_count}</p>
                         <p className='repo-icon-label'><FontAwesomeIcon className='repo-detail-icon' icon={faCodeFork} /> {r.forks_count}</p>
                     </li>)}
@@ -88,11 +88,12 @@ const RepoListPage = () => {
               containerClassName={'pagination'}
               pageClassName={'pagination-item'}
               pageLinkClassName={'pagination-link'}
-              previousClassName={'pagination-item'}
-              previousLinkClassName={'pagination-link'}
-              nextClassName={'pagination-item'}
-              nextLinkClassName={'pagination-link'}
-              activeClassName={'active'}
+              previousClassName={'pagination-previous'}
+              previousLinkClassName={'pagination-previous'}
+              nextClassName={'pagination-next'}
+              nextLinkClassName={'pagination-next'}
+              activeClassName={'pagination-active'}
+              activeLinkClassName={'pagination-active'}
               renderOnZeroPageCount={undefined}
             />
         </div>
