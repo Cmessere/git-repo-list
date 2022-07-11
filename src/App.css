@@ -138,6 +138,24 @@
     color: var(--error-color);
 }
 
+.search-button{
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: var(--text-color);
+    border: 1px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.search-input-container{
+    display: flex;
+}
+
+.search-icon{
+    margin-left: 10px;
+}
+
 input[type="text"]
 {
     font-size:24px;

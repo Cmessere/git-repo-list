@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { checkInput, cleanSearchValue } from '../Utilities/UtilityFunctions';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useHistory } from 'react-router-dom';
 
@@ -35,7 +37,10 @@ function SearchPage() {
         <form className='search-form'  onSubmit={handleSubmit}>
           <h2 className='search-subtitle'>Input the owner and the repository name :</h2>
           <h4 className='search-subtitle-small'>(divided either by space or a slash e.g "Facebook react", "Facebook/react")</h4>
-          <input  className={searchClass} type="text" value={searchValue} onChange={handleSearch} />
+          <div className='search-input-container'>
+            <input className={searchClass} type="text" value={searchValue} onChange={handleSearch} />
+            <button className='search-button'>Search<FontAwesomeIcon className='search-icon' icon={faMagnifyingGlass} /></button>
+          </div>
           {searchError && <label className='search-error'>There is an issue with the inserted value.</label>}
         </form>
       </div>
