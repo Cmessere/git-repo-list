@@ -3,6 +3,10 @@ export type FetchError = {
     message?: string
 }
 
+export type UserResponse = {
+    data: UserData[]
+}
+
 export type UserData = {
     login: string,
     avatar_url: string
