@@ -8,9 +8,20 @@ export type UserData = {
     avatar_url: string
 }
 
+export type RepoListData = {
+    name: string,
+    forks_count: number, 
+    watchers_count: number,
+}
+
 export type RepoDetailParams = {
     owner:string,
     repo: string
+}
+
+export type RepoListParams = {
+    owner:string,
+    type: 'users' | 'orgs'
 }
 
 export type RepoApiResponse = {

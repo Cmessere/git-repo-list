@@ -3,14 +3,15 @@ import * as React from 'react';
 import { gitHubClient } from '../Utilities/Api';
 import { FetchError, UserData } from '../Utilities/Types';
 import { getRandomItems } from '../Utilities/UtilityFunctions';
+import { Route, Switch } from 'react-router-dom';
 
 import '../App.css';
 import LoadingPage from '../Pages/LoadingPage';
 import ErrorPage from '../Pages/ErrorPage';
 import UserListPage from '../Pages/UserListPage';
-import { Route, Switch } from 'react-router-dom';
 import App from './SearchPage';
 import RepoDetailPage from './RepoDetailPage';
+import RepoListPage from './RepoListPage';
 
 function Home() {
   const [users, setUsers] = React.useState([] as UserData[] )
@@ -50,12 +51,13 @@ function Home() {
 
   return (
     <>
-      <Switch>
             <div className='search-page'>
+          <Switch>
               <Route exact path="/" ><App /></Route>
               <Route path="/repos/:owner/:repo" ><RepoDetailPage/></Route>
-            </div> 
+              <Route path="/list/:owner/:type" ><RepoListPage/></Route>
           </Switch >
+            </div> 
       <UserListPage users={users} organizations={organizations} />
     </>
   );

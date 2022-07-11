@@ -164,3 +164,47 @@ input[type="text"]
 .repo-detail-link{
     margin: 128px auto 0 auto;
 }
+
+/*Repo List*/
+.repo-list-item{
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.repo-list-container{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    margin: auto;
+}
+
+.repo-list-label{
+    flex: 2;
+}
+
+.repo-icon-label{
+    flex: 1;
+}
+
+.repo-list-title{
+    text-align: center;
+}
+
+/* Pagination */
+.repo-list-pagination{
+    display: flex;
+    list-style: none;
+    width: 500px;
+    margin: 64px auto 0 auto;
+}
+
+.pagination-item{
+    flex: 1;
+    cursor: pointer;
+}
+.pagination-link{
+    flex: 1;
+    width: 20px;
+    cursor: pointer;
+}

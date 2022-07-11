@@ -8,8 +8,8 @@ const UserListPage = ({users, organizations}) => {
                 <h2 className='user-list-title'>Random repositories</h2>
             </div>
             <div className='user-list-container'>
-                <UserListComponent users={users} />
-                <UserListComponent users={organizations} />
+                <UserListComponent users={users} type={"users"}/>
+                <UserListComponent users={organizations} type={"orgs"}/>
             </div>
         </div>
       )
