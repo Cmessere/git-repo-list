@@ -1,3 +1,12 @@
+:root {
+    --borders-color: #2371b6;
+    --text-color: #004480;
+    --background-color: #ffffff;
+
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
 /*Loading Page*/
 .loading-page{
     display: flex;
@@ -88,8 +97,8 @@
     margin: auto;
     display: flex;
     width: 100%;
-    border-top: 4px solid black;
-    border-bottom: 2px solid black;
+    border-top: 4px solid var(--borders-color);
+    border-bottom: 2px solid var(--borders-color);
 }
 
 /* Search Page */
@@ -121,7 +130,7 @@ input[type="text"]
 
 .header-container{
     height: 72px;
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid var(--borders-color);
     display: flex;
 }
 
@@ -168,7 +177,7 @@ input[type="text"]
 /*Repo List*/
 .repo-list-item{
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--borders-color);
 }
 
 .repo-list-container{
