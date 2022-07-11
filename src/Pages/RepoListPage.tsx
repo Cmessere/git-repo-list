@@ -8,6 +8,7 @@ import { capitalizeString } from '../Utilities/UtilityFunctions';
 import ReactPaginate from 'react-paginate';
 import ErrorPage from './ErrorPage';
 import LoadingPage from './LoadingPage';
+import EmptyListPage from './EmptyListPage';
 
 const RepoListPage = () => {
     const params:RepoListParams = useParams()
@@ -58,10 +59,7 @@ const RepoListPage = () => {
 
     if(reposList.length === 0){
       return(
-        <div className="error-page">
-          <h1 className="error-title">It seems like there is nothing here... 😭</h1>
-          <Link className='repo-detail-link' to={'/'}>Go back</Link>
-      </div>
+        <EmptyListPage/>
       )
     }
     return (

@@ -231,3 +231,14 @@ input[type="text"]
 .pagination-active{
     font-weight: bold;
 }
+
+/*Empty page*/
+.empty-page{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.empty-title{
+    margin: auto;
+}
