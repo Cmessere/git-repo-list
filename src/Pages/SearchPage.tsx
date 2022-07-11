@@ -41,7 +41,7 @@ function SearchPage() {
             <input className={searchClass} type="text" value={searchValue} onChange={handleSearch} />
             <button className='search-button'>Search<FontAwesomeIcon className='search-icon' icon={faMagnifyingGlass} /></button>
           </div>
-          {searchError && <label className='search-error'>The inserted value does not mathc the syntax "Owner Repo" or "Owner/Repo"</label>}
+          {searchError && <label className='search-error'>The inserted value does not match the syntax "Owner Repo" or "Owner/Repo"</label>}
         </form>
       </div>
     </div>
