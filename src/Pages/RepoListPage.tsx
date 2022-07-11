@@ -57,7 +57,7 @@ const RepoListPage = () => {
       )
     }
 
-    if(reposList.length === 0){
+    if(reposList.length === 0 ){
       return(
         <EmptyListPage/>
       )

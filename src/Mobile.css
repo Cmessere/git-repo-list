@@ -1,0 +1,86 @@
+@media screen and (max-width: 428px) {
+    .search-page {
+        height: 450px;
+        width: 90%;
+        margin: auto;
+      }
+
+    .search-input-container{
+        margin: auto;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 18px;
+    }
+
+    h4{
+        font-size: 12px;
+    }
+
+    .avatar {
+        vertical-align: middle;
+        width: 25px;
+        height: 25px;
+    }
+
+    .user-list{
+        padding: 0;
+    }
+
+    .user-list-conatiner{
+        width: 150px;
+    }
+
+    .user-list-item{
+        width: auto;
+    }
+    .user-list-paragraph{
+        font-size: unset;
+    }
+
+    .search-button{
+        height: 25px;
+    }
+
+    input[type="text"] {
+        font-size: unset;
+    }
+
+    .repo-detail-container{
+        flex-direction: column;
+    }
+
+    .repo-list-pagination{
+        padding: 0;
+        width: 350px;
+    }
+
+    .repo-list-container{
+        width: unset;
+    }
+
+    .repo-detail-page{
+        margin: unset;
+    }
+
+    .header-icon {
+        font-size: 18px;
+        margin-top: 24px;
+      }
+      
+    .loading-image {
+        font-size: 24px;
+    }
+
+    .empty-title{
+        font-size: 18px;
+    }
+
+    .error-title{
+        font-size: 22px;
+
+    }
+}

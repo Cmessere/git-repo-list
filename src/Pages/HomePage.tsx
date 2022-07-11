@@ -6,6 +6,7 @@ import { getRandomItems } from '../Utilities/UtilityFunctions';
 import { Route, Switch } from 'react-router-dom';
 
 import '../App.css';
+import '../Mobile.css';
 import LoadingPage from '../Pages/LoadingPage';
 import ErrorPage from '../Pages/ErrorPage';
 import UserListPage from '../Pages/UserListPage';

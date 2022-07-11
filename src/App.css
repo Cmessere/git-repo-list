@@ -42,7 +42,7 @@
 .error-page{
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 24px auto;
 }
 
 .error-title{
@@ -59,6 +59,10 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.user-list-conatiner{
+    display: flex;
 }
 
 .user-list{
@@ -221,6 +225,7 @@ input[type="text"]
     flex-direction: column;
     font-weight: 600;
     margin: auto;
+    padding: 0;
 }
 
 .repo-list-label{
@@ -242,7 +247,8 @@ input[type="text"]
     display: flex;
     list-style: none;
     width: 500px;
-    margin: 64px auto 0 auto;
+    margin: 48px auto 0 auto;
+    padding: 0;
 }
 
 .pagination-item{
