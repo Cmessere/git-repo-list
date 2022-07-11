@@ -22,6 +22,10 @@ After it's done you can launch the app with
 
 > npm start
 
+It is also possible to launch the test suite with (note that there are issues with jest if using a node version below the 16 major)
+
+> npm run test
+
 # Notes
 While developing, the use of external libraries has been kept to a minimum, expecially rendering libraries. <br>
 The only exceptions are Axios and React-router to help with fetching and routing, and react-paginate to avoid implementing a pagination component from scratch.
