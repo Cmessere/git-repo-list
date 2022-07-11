@@ -29,16 +29,18 @@ export const getRandomItems = (array:any[], usersPerPage:number) => {
 }
 
 export const cleanSearchValue = (searchValue:string):string => {
-    const cleanedValueArray = cleanInputFromSpaces(searchValue)
+    const cleanedValueArray = cleanInputFromSymbols(searchValue)
     const cleanedValues = cleanedValueArray.slice(0, 2).join("/"); //Ignoring inputs after second string
-
     return cleanedValues
 }
 
 export const checkInput = (input:string):boolean => {
-    const supportArray = cleanInputFromSpaces(input); 
+    const supportArray = cleanInputFromSymbols(input); 
 
-    return (input.includes(' ') || input.includes('/')) && (supportArray.length >= 2 && supportArray[1].length > 0)
+    return (supportArray.length >= 2 && supportArray[1].length > 0)
 }
 
-const cleanInputFromSpaces = (string:string):string[] => string.trim().replace( /\s\s+/g, ' ' ).split(' ') //The replace flattens multiple spaces
+const cleanInputFromSymbols = (string:string):string[] => {
+    const tempArray = string.trim().replace( /\s\s+/g, ' ' ).replace(/\//g, ' ').split(' ') //The replace flattens multiple spaces
+    return tempArray.filter(item => item); 
+}
