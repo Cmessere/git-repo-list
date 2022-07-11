@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { gitHubClient } from '../Utilities/Api';
+import { usersAndOrganizationsPromises } from '../Utilities/Api';
 import { FetchError, UserData } from '../Utilities/Types';
 import { getRandomItems } from '../Utilities/UtilityFunctions';
 import { Route, Switch } from 'react-router-dom';
@@ -22,10 +22,7 @@ function Home() {
 
   React.useEffect(() => {
 
-      Promise.all([
-        gitHubClient.get('/users'),
-        gitHubClient.get('/organizations')
-      ])
+    usersAndOrganizationsPromises()
       .then(([usersResponse, organizationsResponse])=>{
         setUsers(getRandomItems(usersResponse.data, usersPerPage))
         setOrganizations(getRandomItems(organizationsResponse.data, usersPerPage))

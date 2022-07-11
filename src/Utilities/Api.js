@@ -17,3 +17,10 @@ export const reposListPromise = (ownerName, type) =>{
     else
         return gitHubClient.get(`/orgs/${ownerName}/repos`)
 }
+
+export const usersAndOrganizationsPromises = () => {
+    return Promise.all([
+        gitHubClient.get('/users'),
+        gitHubClient.get('/organizations')
+      ])
+}
