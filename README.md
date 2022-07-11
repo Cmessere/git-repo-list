@@ -21,3 +21,7 @@ In order to launch the application you need to install the dependencies
 After it's done you can launch the app with
 
 > npm start
+
+# Notes
+While developing, the use of external libraries has been kept to a minimum, expecially rendering libraries. <br>
+The only exceptions are Axios and React-router to help with fetching and routing, and react-paginate to avoid implementing a pagination component from scratch.
