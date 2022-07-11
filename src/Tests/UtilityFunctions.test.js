@@ -15,13 +15,13 @@ test("Create random indexes returns the correct number of elements", () => {
 });
 
 
-test("cleanInputFromSpaces correctly removes leading and ending spaces", () => {
-    expect(UtilityFunctions.cleanInputFromSpaces("   Test")).toStrictEqual(["Test"]);
-    expect(UtilityFunctions.cleanInputFromSpaces("Test   ")).toStrictEqual(["Test"]);
-    expect(UtilityFunctions.cleanInputFromSpaces("   Test   ")).toStrictEqual(["Test"]);
-    expect(UtilityFunctions.cleanInputFromSpaces("   Foo   Bar")).toStrictEqual(["Foo", "Bar"]);
-    expect(UtilityFunctions.cleanInputFromSpaces("   Foo   Bar  Fizz ")).toStrictEqual(["Foo", "Bar", "Fizz"]);
-    expect(UtilityFunctions.cleanInputFromSpaces("   Foo   Bar  Fizz Buzz ")).toStrictEqual(["Foo", "Bar", "Fizz", "Buzz"]);
+test("cleanInputFromSymbols correctly removes leading and ending spaces", () => {
+    expect(UtilityFunctions.cleanInputFromSymbols("   Test")).toStrictEqual(["Test"]);
+    expect(UtilityFunctions.cleanInputFromSymbols("Test   ")).toStrictEqual(["Test"]);
+    expect(UtilityFunctions.cleanInputFromSymbols("   Test   ")).toStrictEqual(["Test"]);
+    expect(UtilityFunctions.cleanInputFromSymbols("   Foo   Bar")).toStrictEqual(["Foo", "Bar"]);
+    expect(UtilityFunctions.cleanInputFromSymbols("   Foo   Bar  Fizz ")).toStrictEqual(["Foo", "Bar", "Fizz"]);
+    expect(UtilityFunctions.cleanInputFromSymbols("   Foo   Bar  Fizz Buzz ")).toStrictEqual(["Foo", "Bar", "Fizz", "Buzz"]);
 });
 
 

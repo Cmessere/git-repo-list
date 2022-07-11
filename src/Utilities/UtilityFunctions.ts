@@ -40,7 +40,7 @@ export const checkInput = (input:string):boolean => {
     return (supportArray.length >= 2 && supportArray[1].length > 0)
 }
 
-const cleanInputFromSymbols = (string:string):string[] => {
+export const cleanInputFromSymbols = (string:string):string[] => {
     const tempArray = string.trim().replace( /\s\s+/g, ' ' ).replace(/\//g, ' ').split(' ') //The replace flattens multiple spaces
     return tempArray.filter(item => item); 
 }
