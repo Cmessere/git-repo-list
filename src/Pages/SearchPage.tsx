@@ -19,7 +19,7 @@ function SearchPage() {
     const cleanedValue = cleanSearchValue(searchValue)
 
     if(validInput)
-      history.push(`/repos/${cleanedValue}`)
+      history.push(`/git-repo-list/repos/${cleanedValue}`)
     else{
       setSearchClass("search-input-error")
       setSearchError(true)

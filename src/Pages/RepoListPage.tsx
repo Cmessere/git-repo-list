@@ -68,7 +68,7 @@ const RepoListPage = () => {
             <ul className="repo-list-container">
                 {currentItems.map(r => 
                     <li key={r.name} className='repo-list-item'>
-                        <Link className='repo-list-label' to={`/repos/${params.owner}/${r.name}`}>{capitalizeString(r.name)}</Link>
+                        <Link className='repo-list-label' to={`/git-repo-list/repos/${params.owner}/${r.name}`}>{capitalizeString(r.name)}</Link>
                         <p className='repo-icon-label'><FontAwesomeIcon className='repo-detail-icon' icon={faStar} /> {r.watchers_count}</p>
                         <p className='repo-icon-label'><FontAwesomeIcon className='repo-detail-icon' icon={faCodeFork} /> {r.forks_count}</p>
                     </li>)}

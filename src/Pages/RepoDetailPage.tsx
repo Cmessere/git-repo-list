@@ -46,7 +46,7 @@ const RepoDetailPage = () => {
               <h2 className='repo-detail-item'><FontAwesomeIcon className='repo-detail-icon' icon={faStar} />Stars: {repoDetails.watchers_count}</h2>
               <h2 className='repo-detail-item'><FontAwesomeIcon className='repo-detail-icon' icon={faCodeFork} />Forks: {repoDetails.forks_count}</h2>
             </div>
-            <Link className='repo-detail-link' to={'/'}>Do another search?</Link>
+            <Link className='repo-detail-link' to={'/git-repo-list'}>Do another search?</Link>
         </div>
       )
 }

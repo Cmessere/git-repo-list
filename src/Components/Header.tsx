@@ -8,7 +8,7 @@ const Header = () => {
     
     return(
         <div className='header-container'>
-            <p onClick={() => history.push("/")} className='header-icon'><FontAwesomeIcon icon={faHouse} /></p>
+            <p onClick={() => history.push("/git-repo-list")} className='header-icon'><FontAwesomeIcon icon={faHouse} /></p>
             <h1 className='header-title'>GitHub Search</h1>
         </div>
       )

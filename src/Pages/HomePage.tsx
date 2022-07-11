@@ -51,9 +51,9 @@ function Home() {
     <>
       <div className='search-page'>
         <Switch>
-            <Route exact path="/" ><App /></Route>
-            <Route path="/repos/:owner/:repo" ><RepoDetailPage/></Route>
-            <Route path="/list/:owner/:type" ><RepoListPage/></Route>
+            <Route exact path="/git-repo-list" ><App /></Route>
+            <Route path="/git-repo-list/repos/:owner/:repo" ><RepoDetailPage/></Route>
+            <Route path="/git-repo-list/list/:owner/:type" ><RepoListPage/></Route>
         </Switch >
       </div> 
       <UserListPage users={users} organizations={organizations} />
