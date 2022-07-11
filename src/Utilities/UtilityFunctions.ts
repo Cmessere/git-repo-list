@@ -29,8 +29,14 @@ export const getRandomItems = (array:any[], usersPerPage:number) => {
 }
 
 export const cleanSearchValue = (string:string):string => {
-    //The first replace is a regex to remove multiple spaces. The rest is a simple replace of spaces with a slash
-    const cleanedValue = string.replace( /\s\s+/g, ' ' ).split(' ').join('/');
+    const cleanedValueArray = string.replace( /\s\s+/g, ' ' ).split(' '); //The replace flattens multiple spaces
+    const cleanedValues = cleanedValueArray.slice(0, 2).join("/"); //Ignoring inputs after second string
     
-    return cleanedValue
+    return cleanedValues
+}
+
+export const checkInput = (string:string):boolean => {
+    const supportArray = string.split(' ')
+
+    return (string.includes(' ') || string.includes('/')) && (supportArray.length > 1 && supportArray[1].length > 0)
 }

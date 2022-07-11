@@ -2,6 +2,7 @@
     --borders-color: #2371b6;
     --text-color: #004480;
     --background-color: #ffffff;
+    --error-color: #ff0000;
 
     color: var(--text-color);
     background-color: var(--background-color);
@@ -110,7 +111,14 @@
 
 .search-container{
     margin: auto;
-    text-align: center;
+    text-align: start;
+}
+.search-subtitle{
+    margin-bottom: 4px;
+}
+
+.search-subtitle-small{
+    margin-top: 0;
 }
 
 .search-form{
@@ -119,6 +127,15 @@
 
 .search-input{
     width: 100%;
+}
+
+.search-input-error{
+    width: 100%;
+    border: 2px solid var(--error-color);
+}
+
+.search-error{
+    color: var(--error-color);
 }
 
 input[type="text"]
