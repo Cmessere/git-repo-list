@@ -51,13 +51,13 @@ function Home() {
 
   return (
     <>
-            <div className='search-page'>
-          <Switch>
-              <Route exact path="/" ><App /></Route>
-              <Route path="/repos/:owner/:repo" ><RepoDetailPage/></Route>
-              <Route path="/list/:owner/:type" ><RepoListPage/></Route>
-          </Switch >
-            </div> 
+      <div className='search-page'>
+        <Switch>
+            <Route exact path="/" ><App /></Route>
+            <Route path="/repos/:owner/:repo" ><RepoDetailPage/></Route>
+            <Route path="/list/:owner/:type" ><RepoListPage/></Route>
+        </Switch >
+      </div> 
       <UserListPage users={users} organizations={organizations} />
     </>
   );
