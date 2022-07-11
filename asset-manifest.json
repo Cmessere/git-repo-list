@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/github.io/git-repo-list/static/css/main.4e32ca98.css",
-    "main.js": "/github.io/git-repo-list/static/js/main.5028635b.js",
-    "index.html": "/github.io/git-repo-list/index.html",
-    "main.4e32ca98.css.map": "/github.io/git-repo-list/static/css/main.4e32ca98.css.map",
-    "main.5028635b.js.map": "/github.io/git-repo-list/static/js/main.5028635b.js.map"
+    "main.css": "/git-repo-list/static/css/main.4e32ca98.css",
+    "main.js": "/git-repo-list/static/js/main.5028635b.js",
+    "index.html": "/git-repo-list/index.html",
+    "main.4e32ca98.css.map": "/git-repo-list/static/css/main.4e32ca98.css.map",
+    "main.5028635b.js.map": "/git-repo-list/static/js/main.5028635b.js.map"
   },
   "entrypoints": [
     "static/css/main.4e32ca98.css",
