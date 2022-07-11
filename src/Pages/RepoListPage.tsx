@@ -34,7 +34,6 @@ const RepoListPage = () => {
     
     React.useEffect(() => {
       const endOffset = itemOffset + itemsPerPage;
-      console.log(`Loading items from ${itemOffset} to ${endOffset}`);
       setCurrentItems(reposList.slice(itemOffset, endOffset));
       setPageCount(Math.ceil(reposList.length / itemsPerPage));
 
@@ -43,9 +42,6 @@ const RepoListPage = () => {
 
     const handlePageClick = (event) => {
       const newOffset = (event.selected * itemsPerPage) % reposList.length;
-      console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-      );
       setItemOffset(newOffset);
     };
 
@@ -59,8 +55,6 @@ const RepoListPage = () => {
         <ErrorPage message={error.message} />
       )
     }
-
-    console.log("reposList", reposList)
 
     if(reposList.length === 0){
       return(

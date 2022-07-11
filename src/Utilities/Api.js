@@ -12,7 +12,6 @@ export const reposDetailPromise = (ownerName, repoId) =>{
 
 
 export const reposListPromise = (ownerName, type) =>{
-    console.log("type", type)
     if(type === "users" )
         return gitHubClient.get(`/users/${ownerName}/repos`)
     else
